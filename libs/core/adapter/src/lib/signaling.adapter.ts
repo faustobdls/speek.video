@@ -7,6 +7,12 @@ export interface SignalingConfig {
   options?: any
 }
 
+/**
+ * Signaling used to communication for discover other peer
+ *
+ * @export
+ * @class SignalingAdapter
+ */
 export class SignalingAdapter {
   private message = new Subject<SpeekPayload>()
   onMessage = this.message.asObservable()

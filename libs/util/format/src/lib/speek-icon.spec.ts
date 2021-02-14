@@ -1,7 +1,7 @@
-import { getLogo } from './speek-icon'
+import { getFire } from './speek-icon'
 
-describe('getLogo', () => {
+describe('getFire', () => {
   it('should create an instance', () => {
-    expect(getLogo('#d32f2f')).toBeTruthy()
+    expect(getFire('#d32f2f')).toBeTruthy()
   })
 })

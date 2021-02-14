@@ -5,12 +5,22 @@ export class StreamAdapter {
 
   constructor(public config: StreamConfig) {}
 
+  /**
+   * Return stream of user device
+   *
+   * @param {MediaStreamConstraints} [constraints]
+   * @returns stream of user device
+   * @memberof StreamAdapter
+   */
   getStream(constraints?: MediaStreamConstraints) {
     return navigator.mediaDevices.getUserMedia(
       constraints ? constraints : this.config
     )
   }
 
+  /**
+   * Stop stream tracks
+   */
   stopStream(): void {
     if (this.currentStream) {
       this.currentStream.getTracks().forEach((t) => t.stop())
